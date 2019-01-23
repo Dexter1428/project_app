@@ -15,10 +15,9 @@ class App extends Component {
 
     
     <div>
-        <ul>
+        
           <Navbar/>
 
-        </ul>
           
         {/* <li>
           <Link to="/">Home</Link>
