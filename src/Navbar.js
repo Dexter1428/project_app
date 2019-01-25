@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import MyAccount from './myaccount'
 import Contact from './contact'
+import Login from './login'
 
 class Navbar extends Component {
   render() {
@@ -23,14 +24,19 @@ class Navbar extends Component {
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      <li><Link to="/login"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></Link></li>
     </ul>
 
     
       
   </div>
-</nav><div><Route path="/myaccount" component={MyAccount} />
-    <Route path="/contact" component={Contact} /></div></div>
+</nav>
+<div>
+    <Route path="/myaccount" component={MyAccount} />
+    <Route path="/contact" component={Contact} />
+    <Route path="/login" component={Login} />
+    </div>
+</div>
   
 </Router>
 
